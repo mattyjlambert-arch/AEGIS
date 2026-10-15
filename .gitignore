@@ -1,0 +1,59 @@
+# Dependencies and build output
+node_modules/
+dist/
+.next/
+.vinext/
+.wrangler/
+coverage/
+
+# Runtime state
+.sites-runtime/
+.duck-runtime/
+*.log
+*.pid
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.token
+*.secret
+
+# Continuity/runtime evidence
+.continuity.env
+continuity-*-state.json
+continuity-*-receipt.json
+runtime-evidence/
+local-evidence/
+
+# Local models and large artefacts
+models/
+*.gguf
+*.safetensors
+*.bin
+*.onnx
+
+# IDE / OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Recovery and local backups
+*.bak
+*.backup
+*.orig
+*.tmp
+*.temp
