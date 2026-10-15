@@ -38,5 +38,6 @@ jobs:
           layer-eight/tests/continuity-profile.test.mjs
           layer-eight/tests/continuity-reasoning.test.mjs
           layer-eight/tests/continuity-conflict-review.test.mjs
+          layer-eight/tests/continuity-strategic-adapter.test.mjs
           layer-eight/tests/strategic-mesh.test.mjs
           layer-eight/tests/situation-engine.test.mjs
