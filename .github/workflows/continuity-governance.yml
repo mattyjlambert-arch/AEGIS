@@ -1,0 +1,43 @@
+name: Continuity Governance
+
+on:
+  push:
+    branches:
+      - main
+      - integration/verity-layer-eight
+  pull_request:
+    paths:
+      - "layer-eight/lib/continuity-*.ts"
+      - "layer-eight/lib/strategic-mesh.ts"
+      - "layer-eight/lib/situation-engine.ts"
+      - "layer-eight/tests/continuity-*.test.mjs"
+      - "layer-eight/tests/strategic-mesh.test.mjs"
+      - "layer-eight/tests/situation-engine.test.mjs"
+      - ".github/workflows/continuity-governance.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  continuity-governance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Run Continuity and Strategic Mesh tests
+        run: >-
+          node --experimental-strip-types --test
+          layer-eight/tests/continuity-observation-policy.test.mjs
+          layer-eight/tests/continuity-profile.test.mjs
+          layer-eight/tests/continuity-reasoning.test.mjs
+          layer-eight/tests/continuity-conflict-review.test.mjs
+          layer-eight/tests/continuity-strategic-adapter.test.mjs
+          layer-eight/tests/strategic-mesh.test.mjs
+          layer-eight/tests/situation-engine.test.mjs
