@@ -1,11 +1,11 @@
-import type { ContinuityEvent, ContinuitySnapshot } from "./continuity-core";
+import type { ContinuityEvent, ContinuitySnapshot } from "./continuity-core.ts";
 import {
   addStrategicEdge,
   addStrategicNode,
   createStrategicGraph,
   type StrategicGraph,
   type StrategicSource,
-} from "./strategic-mesh";
+} from "./strategic-mesh.ts";
 
 function confidenceFromSnapshot(snapshot: ContinuitySnapshot) {
   const value = snapshot.state.confidence;
