@@ -2,7 +2,7 @@ import type {
   StrategicEdge,
   StrategicGraph,
   StrategicNode,
-} from "./strategic-mesh";
+} from "./strategic-mesh.ts";
 
 export type SituationKind =
   | "meaningful_change"
